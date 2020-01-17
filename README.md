@@ -38,7 +38,7 @@ function errorHandler(err) {
   } else if (err instanceof NotNullViolationError) {
     console.log(`Not null constraint failed for table ${err.table} and column ${err.column}`);
   } else if (err instanceof DBError) {
-    console.log(`Some unknown DB error ${dbError.nativeError}`);
+    console.log(`Some unknown DB error ${err.nativeError}`);
   }
 }
 ```
